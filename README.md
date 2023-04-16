@@ -1,2 +1,0 @@
-# FinalYearProject-TalkNow
-# FinalYearProject-TalkNow
