@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkTwoYou", "TalkTwoYou\TalkTwoYou.csproj", "{086B30EB-38DE-4779-88A3-CB137C98D374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkTwoYouTests", "TalkTwoYouTests\TalkTwoYouTests.csproj", "{67A26DD9-7708-4FA3-93A6-9D44D10918F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086B30EB-38DE-4779-88A3-CB137C98D374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086B30EB-38DE-4779-88A3-CB137C98D374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086B30EB-38DE-4779-88A3-CB137C98D374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086B30EB-38DE-4779-88A3-CB137C98D374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A26DD9-7708-4FA3-93A6-9D44D10918F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A26DD9-7708-4FA3-93A6-9D44D10918F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A26DD9-7708-4FA3-93A6-9D44D10918F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A26DD9-7708-4FA3-93A6-9D44D10918F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {077264A6-6D69-4B9A-91D1-5713165D7566}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "talktwoyou",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

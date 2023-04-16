@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{086B30EB-38DE-4779-88A3-CB137C98D374}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TalkTwoYou/appsettings.json">
+    <Files>
+      <File FileName="TalkTwoYou/Program.cs" />
+      <File FileName="TalkTwoYou/Properties/launchSettings.json" />
+      <File FileName="TalkTwoYou/ClientApp/package.json" />
+      <File FileName="TalkTwoYou/ClientApp/proxy.conf.json" />
+      <File FileName="TalkTwoYou/ClientApp/angular.json" />
+      <File FileName="TalkTwoYou/ClientApp/tsconfig.json" />
+      <File FileName="TalkTwoYou/ClientApp/src/app/home/home.component.ts" />
+      <File FileName="TalkTwoYou/Controllers/ValuesController.cs" />
+      <File FileName="TalkTwoYou/appsettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TalkTwoYou" expanded="True">
+            <Node name="TalkTwoYou" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="TalkTwoYouTests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TalkTwoYou PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

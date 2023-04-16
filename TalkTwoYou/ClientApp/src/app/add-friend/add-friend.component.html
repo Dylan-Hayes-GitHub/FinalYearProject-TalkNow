@@ -1,0 +1,38 @@
+<br>
+<h1 style="text-align: center;"> Friend Requests </h1>
+<div class="FriendRequestsScrollable" *ngFor="let requests of currentFriendRequest">
+  <hr>
+  <div class="friendRequestContainer">
+
+    <img
+      class="userProfileImage"
+      src="{{ requests.UserDetails.userProfileUrl }}"
+      *ngIf="requests.UserDetails.hasProfilePicture"
+    />
+    <mat-icon
+      class="noProfilePicture"
+      *ngIf="!requests.UserDetails.hasProfilePicture"
+    >account_circle</mat-icon
+    >
+    <div class="otherInfoDiv">
+      <div class="friendRequestNameDiv">
+        <h3> {{requests.UserDetails.FirstName}} {{requests.UserDetails.LastName}}</h3>
+       </div>
+
+       <div class="buttonDiv">
+        <div class="addFriendContainer">
+          <button class="addFriendButton" (click)="addFriend(requests.FirebaseId)">
+            Add
+          </button>
+        </div>
+        <div class="cancelFriendContainer">
+          <button class="declineFriendRequest" (click)="cancelFriendRequest(requests.FirebaseId)">
+            Decline
+          </button>
+        </div>
+       </div>
+    </div>
+  </div>
+  <hr>
+
+</div>

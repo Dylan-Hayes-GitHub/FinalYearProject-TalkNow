@@ -1,0 +1,21 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/6.0.10/ref/net6.0/System.Diagnostics.Tools.dll" /&gt;
+  &lt;Assembly Path="/usr/local/share/dotnet/packs/Microsoft.AspNetCore.App.Ref/6.0.10/ref/net6.0/Microsoft.Net.Http.Headers.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5071c5d7_002D6f05_002D46fa_002D93e9_002D243c3d6098c7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Login_User_No_Details_Provided" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::67A26DD9-7708-4FA3-93A6-9D44D10918F3::net6.0::TalkTwoYouTests.UnitTest1.Login_User_No_Details_Provided&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::67A26DD9-7708-4FA3-93A6-9D44D10918F3::net6.0::TalkTwoYouTests.UnitTest1.GetUserDetails_Results_UserDetails_NotFound&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::67A26DD9-7708-4FA3-93A6-9D44D10918F3::net6.0::TalkTwoYouTests.UnitTest1.Login_User_IncorrectDetails_Provided&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::67A26DD9-7708-4FA3-93A6-9D44D10918F3::net6.0::TalkTwoYouTests.UnitTest1.Login_User_CorrectDetailsProvided_NotVerified&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f94c9823_002D3887_002D41e8_002Dbd3f_002Dea6108d5aa88/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Login_User_No_Details_Provided #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::67A26DD9-7708-4FA3-93A6-9D44D10918F3::net6.0::TalkTwoYouTests.UnitTest1.Login_User_No_Details_Provided&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	
+	
+	</wpf:ResourceDictionary>

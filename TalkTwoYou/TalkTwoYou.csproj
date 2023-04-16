@@ -1,0 +1,222 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>ClientApp\</SpaRoot>
+    <SpaProxyServerUrl>http://localhost:44408</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\net6.0</OutputPath>
+    <OutputPath>bin\Debug\net6.0</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="HiNetCloud.Microsoft.IdentityModel.Tokens" Version="22.7.4.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.26" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.7" />
+    <PackageReference Include="PusherServer" Version="4.6.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Content Remove="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.SpaServices" />
+    <None Remove="Microsoft.AspNetCore.SpaServices.Extensions" />
+    <None Remove="Microsoft.AspNetCore.SpaProxy" />
+    <None Remove="Microsoft.AspNetCore.Cors" />
+    <None Remove="PusherServer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\dist" />
+    <Folder Include="Migrations" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="ClientApp\ios\App\App\Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\ios\App\App\Assets.xcassets\Contents.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\ios\App\App\Assets.xcassets\Splash.imageset\Contents.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\ios\App\App\capacitor.config.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\annotation_processor_list\debug\annotationProcessors.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\apk\debug\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\assets\debug\mergeDebugAssets\capacitor.config.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\assets\debug\mergeDebugAssets\capacitor.plugins.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\compatible_screen_manifest\debug\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_manifests\debug\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\debug.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-af.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-am.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ar.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-as.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-az.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-b+sr+Latn.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-be.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-bg.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-bn.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-bs.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ca.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-cs.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-da.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-de.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-el.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-en-rAU.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-en-rCA.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-en-rGB.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-en-rIN.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-en-rXC.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-es-rUS.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-es.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-et.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-eu.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-fa.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-fi.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-fr-rCA.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-fr.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-gl.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-gu.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-h720dp-v13.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-hdpi-v4.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-hi.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-hr.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-hu.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-hy.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-in.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-is.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-it.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-iw.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ja.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ka.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-kk.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-km.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-kn.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ko.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ky.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-land.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-large-v4.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ldltr-v21.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-lo.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-lt.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-lv.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-mk.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ml.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-mn.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-mr.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ms.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-my.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-nb.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ne.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-night-v8.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-nl.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-or.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-pa.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-pl.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-port.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-pt-rBR.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-pt-rPT.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-pt.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ro.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ru.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-si.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sk.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sl.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sq.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sr.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sv.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sw.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-sw600dp-v13.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ta.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-te.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-th.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-tl.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-tr.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-uk.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-ur.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-uz.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v16.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v17.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v18.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v21.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v22.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v23.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v24.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v25.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v26.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v27.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v28.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v29.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-v31.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-vi.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-watch-v20.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-watch-v21.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-xlarge-v4.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-zh-rCN.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-zh-rHK.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-zh-rTW.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values-zu.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\multi-v2\values.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_res_blame_folder\debug\out\single\debug.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\navigation_json\debug\navigation.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\packaged_manifests\debug\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\processed_res\debug\out\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\signing_config_versions\debug\signing-config-versions.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\src\main\assets\capacitor.config.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\src\main\assets\capacitor.plugins.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\capacitor-cordova-android-plugins\build\intermediates\aapt_friendly_merged_manifests\debug\aapt\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\capacitor-cordova-android-plugins\build\intermediates\annotation_processor_list\debug\annotationProcessors.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\capacitor-cordova-android-plugins\build\intermediates\navigation_json\debug\navigation.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\capacitor-cordova-android-plugins\build\intermediates\packaged_manifests\debug\output-metadata.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_assets\debug\out\capacitor.config.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\intermediates\merged_assets\debug\out\capacitor.plugins.json" />
+    <_ContentIncludedByDefault Remove="ClientApp\android\app\build\outputs\apk\debug\output-metadata.json" />
+  </ItemGroup>
+    <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+  
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>wwwroot\%(RecursiveDir)%(FileName)%(Extension)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+</Project>

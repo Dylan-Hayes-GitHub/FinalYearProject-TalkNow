@@ -1,0 +1,53 @@
+<div class="materialForm">
+  <h1>Settings</h1>
+  <div class="loggedInUserImage">
+    <img src="{{loggedInUser.userProfileUrl}}" *ngIf="loggedInUser.hasProfilePicture">
+    <mat-icon
+      class="noProfilePicture"
+      *ngIf="!loggedInUser.hasProfilePicture"
+    >account_circle</mat-icon
+    >
+    <p style="padding: 10px;">
+        <button mat-button (click)="fileInput.click()">Upload Photo</button>
+        <input #fileInput type="file" style="display: none;" (change)="uploadUserImage($event)">
+
+
+    </p>
+  </div>
+  <form [formGroup]="formGroup" (ngSubmit)="settingsChange()">
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-label>First name</mat-label>
+      <input matInput placeholder="Type here" formControlName="firstName"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>person</mat-icon>
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Type here" formControlName="lastName" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>email</mat-icon>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Type here" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>key</mat-icon>
+      <mat-label>Old Password</mat-label>
+      <input
+        matInput
+        placeholder="Type here"
+        formControlName="oldPassword"
+        (input)="validatePasswordInputs($event)"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-icon matSuffix>key</mat-icon>
+      <mat-label>New Password</mat-label>
+      <input matInput placeholder="Type here" formControlName="newPassword" />
+    </mat-form-field>
+    <p>
+      <button mat-button type="submit">Update</button>
+    </p>
+  </form>
+
+</div>

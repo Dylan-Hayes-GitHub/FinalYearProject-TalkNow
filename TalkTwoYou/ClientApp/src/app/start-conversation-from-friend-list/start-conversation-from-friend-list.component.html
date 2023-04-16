@@ -1,0 +1,32 @@
+
+
+
+  <div class="friendListContainer" >
+    <h1 style="text-align: center;">Friend list</h1>
+  <div class="wrapperContainer" >
+    <hr>
+
+    <div class="friendDiv" *ngFor="let friend of friendList" (click)="messageFriend(friend)">
+      <div class="friendImage" >
+        <img
+          src="{{ friend.UserDetails.userProfileUrl}}"
+          id="{{ friend.FirebaseId }}"
+
+          *ngIf="friend.UserDetails.hasProfilePicture"
+        /><br>
+        <mat-icon
+          class="noProfilePicture"
+          *ngIf="!friend.UserDetails.hasProfilePicture"
+        >account_circle</mat-icon
+        >
+      </div>
+      <div class="friendInfo">
+        <h2>{{friend.UserDetails.FirstName}} {{friend.UserDetails.LastName}} </h2>
+      </div>
+      <hr>
+
+    </div>
+
+  </div>
+
+  </div>

@@ -1,0 +1,121 @@
+/* .classUserProfileImageDiv {
+    height: 100%;
+    width: 20%;
+    float: left;
+}
+
+.userInfoDiv {
+    width: 33%;
+    float: left;
+}
+
+.otherInfoDiv {
+    max-width: 100%;
+    float: left;
+}
+
+.pastChatRoomBox {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 10%;
+    text-align: center;
+}
+
+.userProfileImage {
+    max-width: 100%;
+    max-height: 1%;
+    border-radius: 50%;
+}
+*/
+.authorName {
+    padding: 10px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.messageSendTime {
+    float: right;
+}
+
+.userStateOnline {
+    color: #486B2C;
+}
+
+.userStateOffline {
+    color: red;
+}
+
+
+.pastChatRoomBox {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.classUserProfileImageDiv{
+    width: 40%;
+}
+
+/* .userProfileImage {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+} */
+
+.userInfoDiv {
+    width: 60%;
+}
+
+.otherInfoDiv {
+    width: 100%;
+    padding: 1px;
+}
+
+hr {
+
+}
+
+.messageContent{
+    width: 100%;
+    margin-left: 5%;
+    font-size: large;
+}
+
+.messageSendTime{
+  width: 100%;
+text-align: right;    /* position: relative;
+    bottom: 0;
+    right: 0; */
+}
+
+.lastSeenAt {
+    margin-left: 1em;
+}
+
+.wrapperDiv{
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  width: 100%;
+}
+
+.userProfileImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.noProfilePicture {
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.blurMessage {
+  filter: blur(5px);
+}
+
+

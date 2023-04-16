@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+  </head>
+  <body class="iphoneX" *ngIf="fullyLoaded">
+    <div class="pastChatsDiv">
+      <div class="chatRoomOptions">
+        <div class="loggedInUserImage">
+          <img
+            src="{{ firebaseProfileImageUrl }}"
+            id="{{ loggedInUserDetails.FirebaseId }}"
+            (click)="sendHome()"
+            *ngIf="loggedInUserDetails.hasProfilePicture"
+          /><br />
+          <h1 style="margin-top: 1%">
+            {{ loggedInUserDetails.FirstName }}
+            {{ loggedInUserDetails.LastName }}
+          </h1>
+          <mat-icon
+            class="noProfilePicture"
+            *ngIf="!loggedInUserDetails.hasProfilePicture"
+            (click)="sendHome()"
+            >account_circle</mat-icon
+          >
+        </div>
+
+        <br />
+        <div class="newChatRoomImage">
+          <mat-icon (click)="startNewConversation()">add_comment</mat-icon>
+        </div>
+        <div class="addFriendImage">
+          <mat-icon (click)="addFriend()">person_add</mat-icon>
+        </div>
+        <div class="settingsImage" (click)="userSettings()">
+          <mat-icon>settings</mat-icon>
+        </div>
+      </div>
+      <br />
+
+      <!-- All the different side components for desktop view / tablet -->
+      <app-past-chat-rooms
+        *ngIf="pastChatRooms"
+        [currentLoggedInUserUid]="currentUserUid"
+        (pastConversation)="pastConversation($event)"
+      >
+      </app-past-chat-rooms>
+
+      <app-add-friend *ngIf="addFriendsDiv"> </app-add-friend>
+
+      <app-start-new-conversation
+        *ngIf="newConversation"
+        (startNewConversationPressed)="startConversationRoom($event)"
+        (startFriendConversationEmitter)="startFriendConversation($event)"
+        (joinedRandomConversation)="startRandomPersonConversation($event)"
+      >
+      </app-start-new-conversation>
+
+      <app-setting *ngIf="settings" [loggedInUser]="loggedInUserDetails">
+      </app-setting>
+    </div>
+
+    <div
+      class="mainBodyDiv"
+      *ngIf="
+        (!startConversationWaitingRoom &&
+          !friendConversation &&
+          messagesRetrievedFromServer.length > 0) ||
+        randomConversationBoolean
+      "
+    >
+      <div class="otherUserInfoDiv">
+        <div class="otherUserInfoProfilePicture">
+          <img
+            class="userProfileImage"
+            src="{{ currentUserInConversation.userProfileUrl }}"
+            *ngIf="currentUserInConversation.hasProfilePicture"
+          />
+          <mat-icon
+            class="noProfilePicture"
+            *ngIf="!currentUserInConversation.hasProfilePicture"
+            >account_circle</mat-icon
+          >
+          <div class="addAsFriend" *ngIf="!currentUserInConversation.FriendsAlready && !currentUserInConversation.FriendRequestSent && !friendRequestRecieved">
+            <button (click)="addRandomUser()" mat-button>Add as friend</button>
+          </div>
+
+        </div>
+
+        <div class="otherUserPersonalDiv">
+          <h2>
+            {{ currentUserInConversation.FirstName }}
+            {{ currentUserInConversation.LastName }}
+          </h2>
+
+          <p [ngClass]="{'online': userOnlineState === 'online', 'offline': userOnlineState === 'offline'}">{{ userOnlineState }}</p>
+        </div>
+      </div>
+      <div #scrollableDiv class="messagesBetweenUsersContainer">
+        <div
+          class="messages-between-users iphoneX"
+          *ngFor="let messages of messagesRetrievedFromServer"
+        >
+          <ng-template #name [ngIf]="messagesRetrievedFromServer.length > 0">
+            <div
+              [ngClass]="{
+                'from-client': messages.FromClient == currentUserUid,
+                'from-server': messages.FromClient != currentUserUid
+              }"
+            >
+              <div
+                [ngClass]="{
+                  'from-client-message': messages.FromClient == currentUserUid,
+                  'from-server-message': messages.FromClient != currentUserUid
+                }"
+              >
+                <div
+                  class="chat-message"
+                  [ngClass]="{
+                    'client-style': messages.FromClient == currentUserUid,
+                    'server-style': messages.FromClient != currentUserUid,
+                    blurMessage: messages.Sentiment == 'Negative'
+                  }"
+                  [ngStyle]="{
+                    background:
+                      messages.FromClient == currentUserUid
+                        ? '#1873D8'
+                        : '#05182E',   display: 'inline-block'
+                  }"
+                >
+                  {{ messages.Message }}
+                </div>
+                <div [ngClass]="{
+                    'chevDownRight': messages.FromClient == currentUserUid,
+                    'chevDownLeft': messages.FromClient != currentUserUid
+                  }"
+                  *ngIf="messages.Sentiment == 'Positive' && messages.FromClient !== currentUserUid"
+                >
+                  <mat-icon (click)="reportMessage(messages)">keyboard_arrow_down</mat-icon>
+
+                </div>
+                <br *ngIf="messages.Sentiment == 'Negative'">
+                <br *ngIf="messages.FromClient == currentUserUid">
+                <div [ngClass]="{
+                    'reportOptionsRight': messages.FromClient == currentUserUid,
+                    'reportOptionsLeft': messages.FromClient != currentUserUid
+                  }" *ngIf="currentMessageForReporting == messages.TimeStamp">
+                  <button mat-raised-button style="background-color: #1873D8; color: white;" (click)="reportSelectedMessage(messages)">Report Message</button> <mat-icon>report</mat-icon>
+                </div>
+                <div
+                  [ngClass]="{
+                    messageTimeStampFromClient:
+                      messages.FromClient == currentUserUid,
+                    messageTimeStampFromServer:
+                      messages.FromClient != currentUserUid
+                  }"
+                >
+                  {{ messages.ReadableTime }}
+                </div>
+              </div>
+              <div
+                *ngIf="messages.Sentiment == 'Negative'"
+                [ngClass]="{
+                  warningMessage: messages.FromClient == currentUserUid,
+                  serverWarningmessage: messages.FromClient != currentUserUid
+                }"
+                class=""
+              >
+                This message was deemed as negative or classified as bullying
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+
+      <form [formGroup]="formGroup" (submit)="sendMessage()">
+        <div class="messageInputDiv">
+          <div class="message-input-box">
+            <input
+              class="enter-message-input"
+              type="text"
+              formControlName="messageToSendToOtherUser"
+              placeholder="Enter your message"
+            />
+          </div>
+          <!-- <div class="message-send-button"> -->
+          <button
+            type="submit"
+            class="sendMessageMatIcon"
+            style="
+              background-color: transparent;
+              color: inherit;
+              border: none;
+              outline: none;
+              transition: none;
+            "
+          >
+            <mat-icon
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                                color: #1873D8;
+
+              "
+              >send</mat-icon
+            >
+          </button>
+          <!-- </div> -->
+        </div>
+      </form>
+    </div>
+    <div
+      class="noMessagesToShow"
+      *ngIf="
+        messagesRetrievedFromServer.length === 0 &&
+        !friendConversation &&
+        !randomConversationBoolean
+      "
+    >
+      <div class="sadIcon">
+        <mat-icon> sentiment_dissatisfied </mat-icon>
+      </div>
+      <div class="noMessage">
+        <p>Currently there are no messages to show</p>
+      </div>
+    </div>
+    <div class="friendLisDiv" *ngIf="friendConversation">
+      <app-start-conversation-from-friend-list
+        (friendToMessageEmitter)="startConversationWithFriend($event)"
+      >
+      </app-start-conversation-from-friend-list>
+    </div>
+
+    <ng-template [ngIf]="startConversationWaitingRoom">
+      <app-start-new-conversation-waiting-room
+        (foundUserForConversation)="startRandomUserConversation($event)"
+      >
+      </app-start-new-conversation-waiting-room>
+    </ng-template>
+  </body>
+</html>

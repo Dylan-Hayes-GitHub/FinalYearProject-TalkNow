@@ -1,0 +1,26 @@
+<mat-card class="materialCard">
+  <mat-card-content>
+    <mat-card-title class="loginHeader">Verify Account</mat-card-title>
+  </mat-card-content>
+  <mat-card-content>
+    <img mat-card-lg-image src="../../assets/logo.png" />
+  </mat-card-content>
+  <mat-card-content>
+    <p>
+      To be able to gain full access to the application, you must verify your
+      email address. An email has been sent you.
+    </p>
+  </mat-card-content>
+  <mat-card-content *ngIf="accountVerified == 'notverified'">
+    <p style="color: red;">
+      Your email address is not verified
+    </p>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-card-content>
+      <button mat-raised-button color="primary" (click)="verifyAccount()">
+        Verify Account
+      </button>
+    </mat-card-content>
+  </mat-card-footer>
+</mat-card>

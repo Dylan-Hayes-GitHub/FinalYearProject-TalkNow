@@ -1,0 +1,78 @@
+.userSettingsContainerFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.userProfileImage {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.userProfileImage i {
+  position: relative;
+  bottom: -49%;
+}
+
+.userProfileImage img {
+  width: 25%;
+  min-width: 20%;
+}
+
+.userNameDiv, .emailDiv {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.userNameDiv label, .emailDiv label {
+  width: 50%;
+}
+
+.userNameDiv input, .emailDiv input {
+  width: 40%;
+  margin-right: 0.1rem;
+}
+
+.settingsButtonDiv {
+  width: 100%;
+  text-align: center;
+}
+
+.confirmChangesButton {
+  padding: 5px;
+  background-color: #1873D8;
+  border: 1px solid #1873D8;
+  color: white;
+  width: 30%;
+  font-size: larger;
+  border-radius: 20px;
+}
+
+.mat-form-field {
+  width: 100;
+}
+
+.materialForm {
+  text-align: center;
+}
+
+.loggedInUserImage img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.noProfilePicture {
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+button {
+  background-color: #1873D8;
+  color: white;
+}

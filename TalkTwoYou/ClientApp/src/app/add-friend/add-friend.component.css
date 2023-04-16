@@ -1,0 +1,94 @@
+.friendRequestContainer {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.friendRequestProfileImage{
+  width: 30%;
+}
+
+.friendRequestOptions {
+  width: 68%;
+}
+
+.friendRequestProfileImage img {
+  max-width: 100%;
+  min-width: 20%;
+  border-radius: 50%;
+}
+
+.addFriendButton {
+  padding: 5px;
+  background-color: #1873D8;
+  border: 1px solid #1873D8;
+  color: white;
+  width: 100%;
+  font-size: larger;
+  margin-right: 5%;
+}
+
+.declineFriendRequest {
+    padding: 5px;
+    background-color: #05182E;
+    border: 1px solid #05182E;
+    color: white;
+    width: 100%;
+    font-size: larger;
+}
+
+.declineFriendRequest, .addFriendButton {
+  border-radius: 10px;
+}
+
+.addFriendContainer, .cancelFriendContainer {
+  width: 48%;
+  text-align: center;
+  display: inline-flex;
+}
+
+
+
+.FriendRequestsScrollable {
+  height: 68vh;
+  overflow-y: scroll;
+}
+
+.outerContainer {
+  width: 100%;
+}
+.friendRequestNameDiv {
+  width: 90%;
+  text-align: center;
+  height: 10%;
+}
+
+
+.otherInfoDiv {
+  width: 68%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttonDiv {
+  width: 100%;
+}
+
+.userProfileImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2%;
+}
+
+.noProfilePicture {
+  font-size: 80px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2%;
+}

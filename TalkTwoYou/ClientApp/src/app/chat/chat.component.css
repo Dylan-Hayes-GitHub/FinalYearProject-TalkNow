@@ -1,0 +1,401 @@
+
+.messages-between-users {
+  display: flex;
+  /*max-width: 40em;*/
+  margin-top: 10px;
+  flex-wrap: wrap;
+
+  /*margin: 0;*/
+}
+
+.from-client, .from-server {
+  flex-basis: 100%;
+  width: 50%;
+}
+
+.from-client-message {
+  color: black;
+  word-wrap: break-word;
+  max-width: 25%;
+  height: auto;
+  text-align: right;
+  vertical-align: middle;
+  margin-bottom: 0.1em;
+  margin-right: 20%;
+  float: right;
+}
+
+.from-server-message {
+  color: white;
+  word-wrap: break-word;
+  max-width: 25%;
+  height: auto;
+  float: left;
+  margin-bottom: 0.1em;
+  margin-left: 20%;
+  padding: 10px;
+  text-align: left;
+}
+
+.server-style {
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+.enter-message-box {
+  /*display: flex;*/
+  flex-wrap: nowrap;
+  text-align: center;
+  justify-content: center;
+  /*margin-top: 1em;*/
+}
+
+.enter-message-prompt {
+  margin: 5px;
+  min-width: 160px;
+  border-radius: 10px;
+}
+
+img.send-message-icon {
+  height: 100%;
+  width: 100%;
+
+}
+
+.time-stamp {
+  flex-basis: 100%;
+  margin-bottom: 0.2em;
+  color: black;
+}
+
+ .client-position {
+  text-align: right;
+  margin-left: 25%;
+}
+
+.server-position {
+  text-align: left;
+}
+
+.chat-message {
+  padding: 10px;
+}
+
+.client-style {
+  background: #1873D8;
+  color: white;
+  border-radius: 10px;
+}
+
+.iphoneX{
+  padding: env(safe-area-inset-top);
+  max-height: 100vh;
+}
+
+.messageTimeStampFromServer {
+  margin-top: 0.5em;
+  float: left;
+  text-align: center;
+  color: black;
+}
+
+.messageTimeStampFromClient {
+  float: right;
+  text-align: center;
+  color: black;
+}
+
+.messageInputDiv {
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  border: 3px solid #1873D8;
+  border-radius: 20px;
+  height: 5vh;
+}
+
+.message-input-box {
+  width: 90%;
+  padding: 5px;
+}
+
+.message-send-button {
+  width: 10%;
+  padding: 5px;
+}
+
+.enter-message-input{
+  width: 100%;
+  border: none;
+}
+
+.enter-message-input:focus{
+  outline: none;
+}
+
+body {
+  display: flex;
+}
+
+.pastChatsDiv {
+  width: 33%;
+  height: 100vh;
+}
+
+.mainBodyDiv {
+  width: 66%;
+  position: relative;
+}
+
+.friendLisDiv {
+  width: 66%;
+  position: relative;
+}
+
+html, body.iphoneX {
+  overflow: auto;
+}
+
+body.iphoneX {
+  margin: 0;
+}
+
+.messagesBetweenUsersContainer{
+  max-height: calc(90vh - 17vh);  /* 50px is the height of the fixed div */
+  overflow-y: auto;
+}
+
+.otherUserInfoProfilePicture {
+  width: 50%;
+}
+
+
+
+.otherUserPersonalDiv {
+  width: 30%;
+}
+
+/* .otherUserInfoDiv {
+  width: 100%;
+} */
+
+.otherUserInfoDiv {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 20vh;
+}
+
+.userStateOnline {
+  color: #486B2C;
+}
+
+.userStateOffline {
+  color: red;
+}
+
+.userProfileImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 2%;
+}
+
+.addAsFriend{
+  width: 100%;
+}
+
+.addAsFriend button{
+  padding: 5px;
+  background-color: #1873D8;
+  border: 1px solid #1873D8;
+  color: white;
+  width: 30%;
+  font-size: larger;
+}
+
+.chatRoomOptions {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 20vh;
+}
+
+.newChatRoomImage img {
+  max-width: 30%;
+  max-height: 100%;
+}
+
+.newChatRoomTile, .newChatRoomImage {
+  width: 50%;
+}
+
+
+.loggedInUserImage img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.loggedInUserImage{
+  width: 100%;
+}
+
+.addFriendImage, .settingsImage, .newChatRoomImage {
+  width: 33%;
+}
+.addFriendImage img {
+width: 50%;
+height: 50%;
+}
+
+.settingsImage img {
+width: 20%;
+height: 20%;
+}
+
+.blurMessage {
+  filter: blur(5px);
+}
+
+.warningMessage {
+  float: right;
+  width: 100%;
+  position: relative;
+  text-align: right;
+  color: red;
+  filter: none;
+}
+
+.serverWarningmessage {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  color: red;
+  filter: none;
+}
+
+mat-icon {
+  font-size: 3.5vh;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.userInfoCard{
+  text-align: center;
+  /* display: flex;
+  flex-direction: column; */
+  max-height: 100%;
+  width: 400px;
+  margin: auto;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+.noProfilePicture {
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.noMessagesToShow{
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+align-content: center;
+}
+
+.noMessagesToShow mat-icon{
+  font-size: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.sadIcon, .noMessage {
+  width: 100%;
+  text-align: center;
+}
+
+.button-with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: red;
+}
+
+.sendMessageMatIcon {
+  color: #1873D8;
+}
+
+.chevDownRight {
+  width: 100%;
+  color: black;
+  height: 30px;
+  float: right;
+}
+
+.chevDownLeft {
+  width: 100%;
+
+  color: black;
+  height: 30px;
+  float: left;
+}
+
+.reportOptionsLeft {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  float: left;
+
+}
+
+.reportOptionsRight {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  float: right;
+}
+
+.reportOptionsRight mat-icon, .reportOptionsLeft mat-icon {
+  color: red;
+}
+
+.reportButton button {
+  background-color: #1873D8;
+}
+
+
+

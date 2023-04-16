@@ -1,0 +1,55 @@
+.friendListContainer {
+  width: 75%;
+  position: relative;
+
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.friendDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.friendDiv:hover {
+  cursor: pointer;
+}
+
+.friendImage img {
+
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.friendImage{
+  width: 50%;
+}
+
+.friendInfo {
+  width: 50%;
+}
+
+.wrapperContainer {
+  overflow-y: auto;
+  height: 90vh;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.noProfilePicture {
+  font-size: 100px;
+}
+
+hr {
+  width: 100%;
+}

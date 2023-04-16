@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "http://localhost:44408",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "/Users/dylanhayes/Desktop/FYPProject/TalkTwoYou/TalkTwoYou/ClientApp/",
+"MaxTimeoutInSeconds": "120"
+}
+}

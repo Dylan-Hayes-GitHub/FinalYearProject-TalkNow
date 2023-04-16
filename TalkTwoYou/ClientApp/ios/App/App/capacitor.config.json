@@ -1,0 +1,6 @@
+{
+	"appId": "com.talktwoyou.app",
+	"appName": "talktwoyou",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

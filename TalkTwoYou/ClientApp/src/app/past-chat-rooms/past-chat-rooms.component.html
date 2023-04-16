@@ -1,0 +1,35 @@
+<h1 style="text-align: center">Chat Rooms</h1>
+<hr />
+<div class="wrapperContainer" *ngIf="!fullyloaded">
+  <div class="pastChatRoomBox" *ngFor="let messages of pastChatRooms">
+    <div class="wrapperDiv" (click)="pastChatRoomPressed(messages.FirebaseUid)">
+      <div class="classUserProfileImageDiv">
+        <img
+          class="userProfileImage"
+          src="{{ messages.ProfileUrl }}"
+          *ngIf="messages.HasProfilePicture"
+        />
+        <!-- <img class="userProfileImage" src="../../assets/baseline_account_circle_black_48dp.png" *ngIf="!messages.ProfileUrl"> -->
+        <mat-icon
+          class="noProfilePicture"
+          *ngIf="!messages.HasProfilePicture"
+        >account_circle</mat-icon
+        >
+      </div>
+      <div class="userInfoDiv">
+        <h3 class="authorName">{{ messages.AuthorName }}</h3>
+        <div class="otherInfoDiv">
+          <div class="messageContent" [ngClass]="{
+                              blurMessage: messages.Sentiment == 'Negative'
+          }">{{ messages.LastMessage }}</div>
+
+          <div class="messageSendTime">{{ messages.SendTime }}</div>
+        </div>
+      </div>
+
+      <hr style="width: 100%" />
+    </div>
+  </div>
+</div>
+
+

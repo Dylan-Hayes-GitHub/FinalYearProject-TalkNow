@@ -1,0 +1,15 @@
+.center-align-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.spinnerColor {
+  stroke: #1873D8;
+}
+
+.leaveButtonDiv {
+  margin-top: 10%;
+}

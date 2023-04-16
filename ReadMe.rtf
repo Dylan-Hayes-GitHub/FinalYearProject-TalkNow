@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Steps for getting system to work broken into  segments\
+Angular\
+First node.js has to be installed which can be installed from https://nodejs.org/en/download and installing latest LTS version\
+ \
+To run and use angular its CLI needs to be installed which can be done by running rpm install -g @angular/cli.\
+\
+After this open a terminal and navigate to the clientApp directory and run npm i, this will install all packages required for the application to start and run\
+\
+To start the application ng serve or npm start within a terminal of the clientApp directory and it will start it\
+\
+Flutter\
+Download the flutter SDK from https://docs.flutter.dev/get-started/install/windows and follow the steps from their website.\
+Android studio and android studio sdk are required to run the flutter application.\
+Download and install visual studio code\
+To run and use the application the talk_now_app folder must be opened within visual studio code, within visual studio code make sure the flutter extension is installed which can be verified by click extensions on the far left if not installed already install it.\
+After this is set up you will now be able to run the application you have 2 options you can plug in an android phone if on windows or an iPhone / android on Mac or you can use an emulator installed from android studio. \
+To select an emulator click on no device at the bottom right in visual studio and select a device to run the flutter application on.\
+After this open lib folder within the main directory and open .dart file it must be a dart file, after this you have the option to select the run tab at the top and then start in debug / no debug mode which will run and start the application.\
+\
+C# \
+Install .NET 7 core from here https://dotnet.microsoft.com/en-us/download\
+After this is installed download visual studio community edition from here and do the base install https://visualstudio.microsoft.com/\
+After this instal SQL Server from here developer edition https://www.microsoft.com/en-ie/sql-server/sql-server-downloads \
+Set up an admin user and make sure to remember the login details.\
+Within the TalkTwoYou folder open appsettings.json and replace the connection string with this and replace the password you set up, only the password is required as the account you made is a system admin\
+\
+    "DefaultConnection": "Server=localhost;Initial Catalog=Talk;User ID=sa;Password=yourpasswordhere; TrustServerCertificate=true;"\
+\
+After this open visual studio and open the .sln file which is located at the root of the folders, this will then open the c# rest api project, once opened locate NuGet and run NuGet restore to ensure all NuGet packages are installed after this open a terminal from within the IDE and run dotnet ef database update. This will then create the database tables. \
+\
+You can then start the backend and to do this run \'93dotnet run\'94 within the terminal \
+\
+Install SQL server management studio from here https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16\
+\
+Log into SSMS with sa and the password you have from earlier and you will be able to access the database.\
+\
+TensorFlow\
+To install tensor flow follow the instructions from here https://www.tensorflow.org/install/pip#windows-native\
+It will ask you to install miniconda for creating a virtual python environment just for tensor flow\
+If you do not have a Nvidia graphics card you will be only able to run the model purely off of your CPU.\
+\
+After tensor flow is installed activate your environment and execute this \'93pip install flask\'94 , \'93pip install flask-cors\'94\
+\
+Navigate to the machine learning folder then python folder, open app.py and update the path to the model to match the system path where you have this downloaded to.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 Open another terminal window then within the directory and run \'93flask run\'94 this will then start the flask server and build the model for predictions\
+\
+You should now be be able to run and access the application.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+}

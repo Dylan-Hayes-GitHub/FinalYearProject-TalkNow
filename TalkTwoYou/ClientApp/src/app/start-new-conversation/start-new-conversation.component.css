@@ -1,0 +1,33 @@
+.buttonContainerFlexBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.startRandomConversation {
+  width: 45%;
+}
+.startConversationWithFriend {
+  width: 50%;
+}
+
+.startConversationButton {
+  padding: 5px;
+  background-color: #1873D8;
+  border: 1px solid #1873D8;
+  color: white;
+  width: 100%;
+  font-size: larger;
+}
+
+.startConversationWithFriendButton {
+  padding: 5px;
+  background-color: #05182E;
+  border: 1px solid #05182E;
+  color: white;
+  width: 75%;
+  font-size: larger;
+  margin-right: 3%;
+}
