@@ -5,6 +5,8 @@ import tensorflow as tf
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
+import re
+import string
 
 def df_to_dataset(dataframe):
   batch_size= 32
@@ -28,10 +30,6 @@ def df_to_dataset(dataframe):
   # Prefetch the next batch in the background while the GPU is working on the current batch
   ds = ds.prefetch(tf.data.AUTOTUNE)
   return ds
-
-
-import re
-import string
 
 
 def preProcess(dataset):
